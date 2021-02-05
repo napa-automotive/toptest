@@ -15,6 +15,11 @@ class CreateSubjectsTable extends Migration
     {
         Schema::create('subjects', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('language_id');
+            $table->string('name');
+            $table->string('description');
+            $table->string('image');
+            $table->string('thumbnail');
             $table->timestamps();
         });
     }

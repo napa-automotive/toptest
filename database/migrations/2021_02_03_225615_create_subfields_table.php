@@ -15,6 +15,11 @@ class CreateSubfieldsTable extends Migration
     {
         Schema::create('subfields', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('subject_id');
+            $table->string('name');
+            $table->string('description');
+            $table->string('image');
+            $table->string('thumbnail');
             $table->timestamps();
         });
     }

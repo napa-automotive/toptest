@@ -15,6 +15,12 @@ class CreateUniversitiesTable extends Migration
     {
         Schema::create('universities', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('description');
+            $table->string('location');
+            $table->integer('rating');
+            $table->string('rector');
+            $table->json('meta');
             $table->timestamps();
         });
     }

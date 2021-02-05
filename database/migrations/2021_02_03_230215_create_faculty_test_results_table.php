@@ -15,6 +15,16 @@ class CreateFacultyTestResultsTable extends Migration
     {
         Schema::create('faculty_test_results', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('faculty_id');
+            $table->date('year');
+            $table->integer('min_score');
+            $table->integer('max_score');
+            $table->integer('avarage_score');
+            $table->integer('pass_score');
+            $table->integer('grant_score');
+            $table->integer('ariza_topshirdi');
+            $table->integer('qabul_qilindi');
+            $table->decimal('entrance_rate');
             $table->timestamps();
         });
     }

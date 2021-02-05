@@ -15,6 +15,9 @@ class CreateChaptersTable extends Migration
     {
         Schema::create('chapters', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('subfield_id');
+            $table->string('name');
+            $table->string('description');
             $table->timestamps();
         });
     }
