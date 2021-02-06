@@ -15,7 +15,7 @@ class CreateFacultiesTable extends Migration
     {
         Schema::create('faculties', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('university_id');
+            $table->foreignId('university_id')->constrained('universities');
             $table->string('name');
             $table->string('description');
             $table->integer('avarage_score');

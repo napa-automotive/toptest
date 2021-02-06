@@ -15,13 +15,12 @@ class CreateUserSessionsTable extends Migration
     {
         Schema::create('user_sessions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id');
-            $table->ipAddress('ip_address');
+            $table->foreignId('user_id')->constrained('users');
+            $table->string('ip_address', 45);
             $table->text('user_agent');
             $table->json('payload');
-            $table->dateTime('created_at');
-            $table->dateTime('last_activity_at');
-            $table->timestamps();
+            $table->timestamp('created_at');
+            $table->timestamp('last_activity_at');
         });
     }
 

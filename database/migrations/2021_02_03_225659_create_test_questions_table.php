@@ -15,7 +15,7 @@ class CreateTestQuestionsTable extends Migration
     {
         Schema::create('test_questions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('unit_id');
+            $table->foreignId('unit_id')->constrained('units');
             $table->string('name');
             $table->string('description');
             $table->integer('level');

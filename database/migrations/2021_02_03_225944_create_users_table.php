@@ -22,8 +22,8 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('image');
             $table->string('thumbnail');
-            $table->dateTime('verified_at');
-            $table->dateTime('activated_at');
+            $table->timestamp('verified_at');
+            $table->timestamp('activated_at');
             $table->timestamps();
         });
     }
