@@ -15,6 +15,10 @@ class CreateUserTestAnswersTable extends Migration
     {
         Schema::create('user_test_answers', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('test_id')->constrained('user_tests');
+            $table->foreignId('question_id')->constrained('test_questions');
+            $table->foreignId('option_id')->constrained('test_options');
+            $table->boolean('is_correct');
             $table->timestamps();
         });
     }

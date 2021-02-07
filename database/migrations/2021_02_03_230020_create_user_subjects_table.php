@@ -15,7 +15,13 @@ class CreateUserSubjectsTable extends Migration
     {
         Schema::create('user_subjects', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('subject_id')->constrained('subjects');
+            $table->integer('progress');
+            $table->integer('state');
+            $table->integer('entry_level');
+            $table->timestamp('created_at');
+            $table->timestamp('completed_at');
         });
     }
 

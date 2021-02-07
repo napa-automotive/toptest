@@ -15,6 +15,11 @@ class CreateUserExamsTable extends Migration
     {
         Schema::create('user_exams', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('subject_id')->constrained('subjects');
+            $table->integer('state');
+            $table->integer('total_score');
+            $table->integer('duration');
             $table->timestamps();
         });
     }

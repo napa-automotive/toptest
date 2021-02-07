@@ -15,6 +15,10 @@ class CreateTestOptionsTable extends Migration
     {
         Schema::create('test_options', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('question_id')->constrained('test_questions');
+            $table->string('name');
+            $table->string('description');
+            $table->boolean('is_correct');
             $table->timestamps();
         });
     }

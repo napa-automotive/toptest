@@ -15,6 +15,13 @@ class CreateUserTestsTable extends Migration
     {
         Schema::create('user_tests', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id');
+            $table->foreignId('exam_id')->nullable();
+            $table->foreign('exam_id')->references('id')->on('user_exams');
+            $table->foreignId('subject_id');
+            $table->integer('questions_count');
+            $table->integer('score');
+            $table->string('type');
             $table->timestamps();
         });
     }
