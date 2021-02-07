@@ -7,6 +7,6 @@ Made with Laravel framework
 -   Sanjar Shavkatxo'jaev
 -   Sayidazim Mahmudov
 -   Mirvali Normamatov
--   Dilshod Ahmadjomov
+-   Dilshod Axmadjonov
 -   Nurxoniddin Bozorov
 -   Hasanbek Elmurodov
