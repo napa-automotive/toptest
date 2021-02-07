@@ -19,11 +19,11 @@ class CreateFacultyTestResultsTable extends Migration
             $table->date('year');
             $table->integer('min_score');
             $table->integer('max_score');
-            $table->integer('avarage_score');
+            $table->integer('average_score');
             $table->integer('pass_score');
             $table->integer('grant_score');
-            $table->integer('ariza_topshirdi');
-            $table->integer('qabul_qilindi');
+            $table->integer('applicants_count');
+            $table->integer('entrants_count');
             $table->decimal('entrance_rate');
             $table->timestamps();
         });

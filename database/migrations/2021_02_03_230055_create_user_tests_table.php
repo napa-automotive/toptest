@@ -22,7 +22,6 @@ class CreateUserTestsTable extends Migration
             $table->integer('questions_count');
             $table->integer('score');
             $table->string('type');
-            $table->dateTime('created_at');
             $table->timestamps();
         });
     }
