@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Subfield extends Model
 {
     use HasFactory;
+
+    public function chapters(){
+        return $this->hasMany(Chapter::class);
+    }
 }

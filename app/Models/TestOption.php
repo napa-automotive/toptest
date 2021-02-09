@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class TestOption extends Model
 {
     use HasFactory;
+
+    public function question(){
+        return $this->hasOne(TestQuestion::class);
+    }
 }
