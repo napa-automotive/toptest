@@ -15,7 +15,7 @@ class CreateSubfieldsTable extends Migration
     {
         Schema::create('subfields', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('subject_id')->constrained('subjects');
+            $table->foreignId('subject_id')->nullable()->constrained('subjects');
             $table->string('name');
             $table->string('description');
             $table->string('image');

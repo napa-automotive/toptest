@@ -22,7 +22,7 @@ class CreateChaptersTable extends Migration
         });
     }
 
-    /**
+    /**S
      * Reverse the migrations.
      *
      * @return void

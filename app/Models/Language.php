@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Language extends Model
 {
     use HasFactory;
+
+    public function subjects (){
+        return $this->hasMany('\App\Models\Subject');
+    }
 }

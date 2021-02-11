@@ -13,6 +13,6 @@ class ChapterSeeder extends Seeder
      */
     public function run()
     {
-        //
+        \App\Models\Chapter::factory()->count(10)->create();
     }
 }

@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class UserSubject extends Model
 {
     use HasFactory;
+
+    public function subjects(){
+        return $this->belongsTo('\App\Models\Subject');
+    }
 }

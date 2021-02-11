@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class TestQuestion extends Model
 {
     use HasFactory;
+
+    public function units(){
+        return $this->belongsTo('\App\Models\Unit');
+    }
 }

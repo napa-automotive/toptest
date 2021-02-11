@@ -8,4 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Chapter extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'subfield_id', 'name', 'description',
+    ];
+
+    public function subfields (){
+        return $this->belongsTo('\App\Models\Subfield');
+    }
+
+    public function units(){
+        return $this->hasMany('\App\Models\Unit');
+    }
 }
+
+
