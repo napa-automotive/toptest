@@ -10,6 +10,6 @@ class UserSubject extends Model
     use HasFactory;
 
     public function subjects(){
-        return $this->belongsTo('\App\Models\Subject');
+        return $this->hasMany('\App\Models\Subject');
     }
 }

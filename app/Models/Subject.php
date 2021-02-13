@@ -21,11 +21,11 @@ class Subject extends Model
         return $this->belongsTo('\App\Models\Language');
     }
 
-    public function usersubject(){
+    public function userSubject(){
         return $this->hasMany('\App\Models\UserSubject');
     }
 
-    public function userexams(){
+    public function userExams(){
         return $this->hasMany('\App\Models\UserExam');
     }
 

@@ -16,7 +16,7 @@ class Subfield extends Model
     public function chapters () {
         return $this -> hasMany('\App\Models\Chapter');
     }
-    public function subjects () {
-        return$this-> belongsTo('\App\Models\Subject', 'subject_id')->withDefault();
+    public function subject() {
+        return $this-> belongsTo('\App\Models\Subject');
     }
 }

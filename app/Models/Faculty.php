@@ -9,11 +9,11 @@ class Faculty extends Model
 {
     use HasFactory;
 
-    public function universities(){
+    public function university(){
         return $this->belongsTo('\App\Models\University');
     }
 
-    public function ftestresults(){
-        return $this->belongsTo('\App\Models\FacultyTestResult');
+    public function testResults(){
+        return $this->hasMany('\App\Models\FacultyTestResult');
     }
 }

@@ -9,7 +9,7 @@ class FacultyTestResult extends Model
 {
     use HasFactory;
 
-    public function faculties(){
-        return $this->hasMany('\App\Models\Faculty');
+    public function faculty(){
+        return $this->belongsTo('\App\Models\Faculty');
     }
 }

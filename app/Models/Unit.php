@@ -9,7 +9,7 @@ class Unit extends Model
 {
     use HasFactory;
 
-    public function testquestions(){
+    public function testQuestions(){
         return $this->hasMany('\App\Models\TestQuestion');
     }
 }

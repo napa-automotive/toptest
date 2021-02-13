@@ -10,17 +10,17 @@ class UserTest extends Model
     use HasFactory;
 
     public function users(){
-        return $this->belongsTo('\App\Models\UserTests');
+        return $this->hasMany('\App\Models\User');
     }
 
     public function userexams(){
-        return $this->belongsTo('\App\Models\UserExam');
+        return $this->hasMany('\App\Models\UserExam');
     }
-    public function usertestanswers(){
+    public function userTestAnswer(){
         return $this->belongsTo('\App\Models\UserTestAnswer');
     }
 
-    public function subjects(){
+    public function subject(){
         return $this->belongsTo('\App\Models\Subject');
     }
 }

@@ -9,7 +9,7 @@ class TestQuestion extends Model
 {
     use HasFactory;
 
-    public function units(){
+    public function unit(){
         return $this->belongsTo('\App\Models\Unit');
     }
 }

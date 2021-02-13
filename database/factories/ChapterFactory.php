@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Chapter;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
 class ChapterFactory extends Factory
@@ -14,10 +15,7 @@ class ChapterFactory extends Factory
     public function definition()
     {
         return [
-            'subfield_id' => function()
-            {
-                return self::factoryForModel(\App\Models\Subfield::class)->create()->id;
-            },
+            'subfield_id' => DB::table("subfields")->get()->random()->id,
             'name' => $this->faker->name,
             'description' => $this->faker->word,
         ];

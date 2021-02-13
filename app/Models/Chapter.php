@@ -13,7 +13,7 @@ class Chapter extends Model
         'subfield_id', 'name', 'description',
     ];
 
-    public function subfields (){
+    public function subfield(){
         return $this->belongsTo('\App\Models\Subfield');
     }
 

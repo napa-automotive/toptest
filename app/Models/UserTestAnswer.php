@@ -9,7 +9,7 @@ class UserTestAnswer extends Model
 {
     use HasFactory;
 
-    public function usertests (){
-        return $this->hasMany('\App\Models\UserTest');
+    public function userTest (){
+        return $this->belongsTo('\App\Models\UserTest');
     }
 }
