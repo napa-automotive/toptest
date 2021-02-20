@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Chapter;
+use App\Models\Subfield;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ChapterFactory extends Factory
@@ -22,7 +23,9 @@ class ChapterFactory extends Factory
     public function definition()
     {
         return [
-            //
+            "subfield_id"=>Subfield::all()->random()->id,
+            "name"=>$this->faker->word,
+            "description"=>$this->faker->text($maxNbChars = 200),
         ];
     }
 }

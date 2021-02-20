@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Faculty;
 use Illuminate\Database\Seeder;
 
 class FacultySeeder extends Seeder
@@ -13,6 +14,6 @@ class FacultySeeder extends Seeder
      */
     public function run()
     {
-        //
+        Faculty::factory()->count(10)->create();
     }
 }

@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\TestQuestion;
+use App\Models\Unit;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class TestQuestionFactory extends Factory
@@ -22,7 +23,10 @@ class TestQuestionFactory extends Factory
     public function definition()
     {
         return [
-            //
+            "unit_id"=>Unit::all()->random()->id,
+            "name"=>$this->faker->word,
+            "description"=>$this->faker->text($maxNbChars = 20),
+            "level"=>$this->faker->randomDigit,
         ];
     }
 }

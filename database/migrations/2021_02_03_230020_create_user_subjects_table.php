@@ -20,8 +20,9 @@ class CreateUserSubjectsTable extends Migration
             $table->integer('progress');
             $table->integer('state');
             $table->integer('entry_level');
-            $table->timestamp('created_at');
+//            $table->timestamp('created_at');
             $table->timestamp('completed_at');
+            $table->timestamps();
         });
     }
 

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\UserSubject;
 use Illuminate\Database\Seeder;
 
 class UserSubjectSeeder extends Seeder
@@ -13,6 +14,6 @@ class UserSubjectSeeder extends Seeder
      */
     public function run()
     {
-        //
+        UserSubject::factory()->count(100)->create();
     }
 }

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Subfield;
 use Illuminate\Database\Seeder;
 
 class SubfieldSeeder extends Seeder
@@ -13,6 +14,6 @@ class SubfieldSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Subfield::factory()->count(10)->create();
     }
 }

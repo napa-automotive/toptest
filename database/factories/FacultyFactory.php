@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Faculty;
+use App\Models\University;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class FacultyFactory extends Factory
@@ -22,7 +23,10 @@ class FacultyFactory extends Factory
     public function definition()
     {
         return [
-            //
+            "university_id"=>University::all()->random()->id,
+            "name"=>$this->faker->firstName,
+            "description"=>$this->faker->sentence($nbWords = 6, $variableNbWords = true),
+            "avarage_score"=>$this->faker->randomDigit,
         ];
     }
 }

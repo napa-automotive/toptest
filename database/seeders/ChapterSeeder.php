@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Chapter;
 use Illuminate\Database\Seeder;
 
 class ChapterSeeder extends Seeder
@@ -13,6 +14,6 @@ class ChapterSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Chapter::factory()->count(10)->create();
     }
 }
