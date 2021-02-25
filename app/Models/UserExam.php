@@ -20,7 +20,8 @@ class UserExam extends Model
     }
 
     // Wrong relationship:
-//     public function subjects(){
-//         return $this->hasMany(Subject::class);
-//     }
+    // public function subjects()
+    // {
+    //     return $this->hasMany(Subject::class);
+    // }
 }

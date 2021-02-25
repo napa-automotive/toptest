@@ -13,10 +13,12 @@ class User extends Model
     {
         return $this->hasMany(UserTest::class);
     }
+
     public function userExams()
     {
         return $this->hasMany(UserExam::class);
     }
+    
     public function userSettings()
     {
         return $this->hasMany(UserSetting::class);

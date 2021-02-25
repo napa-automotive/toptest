@@ -13,8 +13,9 @@ class Chapter extends Model
     {
         return $this->belongsTo(Subfield::class);
     }
+
     public function units()
     {
-        return$this->hasMany(Unit::class);
+        return $this->hasMany(Unit::class);
     }
 }
