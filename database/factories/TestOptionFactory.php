@@ -27,7 +27,6 @@ class TestOptionFactory extends Factory
             "name" => $this->faker->word,
             "description" => $this->faker->text($maxnbChars = 20),
             "is_correct" => $this->faker->boolean,
-
         ];
     }
 }
