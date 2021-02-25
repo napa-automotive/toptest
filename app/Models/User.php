@@ -18,7 +18,7 @@ class User extends Model
     {
         return $this->hasMany(UserExam::class);
     }
-    
+
     public function userSettings()
     {
         return $this->hasMany(UserSetting::class);

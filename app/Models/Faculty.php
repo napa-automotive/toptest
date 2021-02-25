@@ -13,7 +13,7 @@ class Faculty extends Model
     {
         return $this->hasMany(FacultyTestResult::class);
     }
-    
+
     public function university()
     {
         return $this->belongsTo(University::class);

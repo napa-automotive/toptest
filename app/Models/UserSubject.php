@@ -7,14 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class UserSubject extends Model
 {
-  use HasFactory;
+    use HasFactory;
 
-  protected $fillable = [
+    protected $fillable = [
     'user_id', 'subject_id', 'progress'
   ];
 
-  public function subject()
-  {
-    return $this->belongsTo(Subject::class);
-  }
+    public function subject()
+    {
+        return $this->belongsTo(Subject::class);
+    }
 }
