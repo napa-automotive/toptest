@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\TestOption;
 use Illuminate\Database\Seeder;
 
 class TestOptionSeeder extends Seeder
@@ -13,6 +14,6 @@ class TestOptionSeeder extends Seeder
      */
     public function run()
     {
-        //
+        TestOption::factory()->count(100)->create();
     }
 }

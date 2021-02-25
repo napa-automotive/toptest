@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\TestQuestion;
 use Illuminate\Database\Seeder;
 
 class TestQuestionSeeder extends Seeder
@@ -13,6 +14,6 @@ class TestQuestionSeeder extends Seeder
      */
     public function run()
     {
-        //
+        TestQuestion::factory()->count(100)->create();
     }
 }

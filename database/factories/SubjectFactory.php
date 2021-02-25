@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Language;
 use App\Models\Subject;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -22,7 +23,11 @@ class SubjectFactory extends Factory
     public function definition()
     {
         return [
-            //
+            "language_id" => Language::all()->random()->id,
+            "name" => $this->faker->word,
+            "description" => $this->faker->text($maxNbChars = 200),
+            "image" => $this->faker->word,
+            "thumbnail" => $this->faker->word,
         ];
     }
 }

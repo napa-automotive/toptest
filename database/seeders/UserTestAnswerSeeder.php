@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\UserTestAnswer;
 use Illuminate\Database\Seeder;
 
 class UserTestAnswerSeeder extends Seeder
@@ -13,6 +14,6 @@ class UserTestAnswerSeeder extends Seeder
      */
     public function run()
     {
-        //
+        UserTestAnswer::factory()->count(100)->create();
     }
 }
