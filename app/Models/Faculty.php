@@ -9,10 +9,12 @@ class Faculty extends Model
 {
     use HasFactory;
 
-    public function testResults(){
+    public function testResults()
+    {
         return $this->hasMany(FacultyTestResult::class);
     }
-    public function university(){
+    public function university()
+    {
         return $this->belongsTo(University::class);
     }
 }

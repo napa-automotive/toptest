@@ -9,7 +9,8 @@ class Subfield extends Model
 {
     use HasFactory;
 
-    public function chapters(){
+    public function chapters()
+    {
         return $this->hasMany(Chapter::class);
     }
 }

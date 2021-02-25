@@ -9,7 +9,8 @@ class University extends Model
 {
     use HasFactory;
 
-    public function faculties(){
+    public function faculties()
+    {
         return $this->hasMany(Faculty::class);
     }
 }

@@ -9,7 +9,8 @@ class TestOption extends Model
 {
     use HasFactory;
 
-    public function question(){
+    public function question()
+    {
         return $this->belongsTo(TestQuestion::class);
     }
 }

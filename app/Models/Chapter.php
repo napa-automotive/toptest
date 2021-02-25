@@ -9,10 +9,12 @@ class Chapter extends Model
 {
     use HasFactory;
 
-    public function subfield(){
+    public function subfield()
+    {
         return $this->belongsTo(Subfield::class);
     }
-    public function units(){
+    public function units()
+    {
         return$this->hasMany(Unit::class);
     }
 }

@@ -9,11 +9,12 @@ class Unit extends Model
 {
     use HasFactory;
 
-    public function chapter(){
+    public function chapter()
+    {
         return $this->belongsTo(Chapter::class);
     }
-    public function testQuestions(){
+    public function testQuestions()
+    {
         return $this->hasMany(TestQuestion::class);
     }
-
 }

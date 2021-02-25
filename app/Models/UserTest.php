@@ -9,15 +9,18 @@ class UserTest extends Model
 {
     use HasFactory;
 
-    public function subject(){
+    public function subject()
+    {
         return $this->belongsTo(Subject::class);
     }
 
-    public function userExam(){
+    public function userExam()
+    {
         return $this->belongsTo(UserExam::class);
     }
 
-    public function user(){
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
 }

@@ -9,14 +9,16 @@ class User extends Model
 {
     use HasFactory;
 
-    public function userTests(){
+    public function userTests()
+    {
         return $this->hasMany(UserTest::class);
     }
-    public function userExams(){
+    public function userExams()
+    {
         return $this->hasMany(UserExam::class);
     }
-    public function userSettings(){
+    public function userSettings()
+    {
         return $this->hasMany(UserSetting::class);
     }
-
 }

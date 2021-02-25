@@ -28,14 +28,14 @@ class UniversityFactory extends Factory
             "rating"=>$this->faker->randomDigit,
             "rector"=>$this->faker->firstNameMale,
             "meta"=>json_encode([$this->faker->randomElement(
-            [
+                [
                 "house",
                 "flat",
                 "apartment",
                 "room", "shop",
                 "lot", "garage"
             ]
-        )
+            )
     ]),
         ];
     }
