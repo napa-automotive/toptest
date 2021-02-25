@@ -10,18 +10,15 @@ class UserExam extends Model
     use HasFactory;
 
     public function userTests(){
-        return $this->hasMany(UserTest::class);
+        return $this->hasMany(UserTest::class, 'exam_id');
     }
-
-    // public function users(){
-    //     return $this->hasMany(User::class);
-    // }
 
     public function user(){
         return $this->belongsTo(User::class);
     }
 
-    public function subjects(){
-        return $this->hasMany(Subject::class);
-    }
+// Wrong relationship:
+//     public function subjects(){
+//         return $this->hasMany(Subject::class);
+//     }
 }
