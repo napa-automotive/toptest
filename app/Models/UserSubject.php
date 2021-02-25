@@ -13,7 +13,7 @@ class UserSubject extends Model
       "user_id", "subject_id", "progress"
     ];
 
-    public function subjects(){
-        return $this->hasMany(Subject::class);
+    public function subject(){
+        return $this->belongsTo(Subject::class);
     }
 }
