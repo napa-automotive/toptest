@@ -12,7 +12,8 @@ class ChapterSeeder extends Seeder
      *
      * @return void
      */
-    public function run() {
-    Chapter::factory()->count(10)->create();
+    public function run()
+    {
+        Chapter::factory()->count(10)->create();
     }
 }
