@@ -24,13 +24,11 @@ class CommentFactory extends Factory
     {
         $commentable = $this->commentable();
         return [
-            "user_id"=>User::all()->random()->id,
-//            "commentable"=>null,
+            "user_id" => User::all()->random()->id,
             'commentable_id' => $commentable::factory(),
             'commentable_type' => $commentable,
-            "rating"=>$this->faker->randomDigit,
-            "feedback"=>$this->faker->sentence($nbWords = 6, $variableNbWords = true),
-
+            "rating" => $this->faker->randomDigit,
+            "feedback" => $this->faker->sentence($nbWords = 6, $variableNbWords = true),
         ];
     }
 
@@ -38,7 +36,7 @@ class CommentFactory extends Factory
     {
         return $this->faker->randomElement([
             User::class,
-//            Video::class,
+            // Video::class,
         ]);
     }
 }

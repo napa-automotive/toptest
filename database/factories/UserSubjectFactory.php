@@ -24,13 +24,14 @@ class UserSubjectFactory extends Factory
     public function definition()
     {
         return [
-            "user_id"=>User::all()->random()->id,
-            "subject_id"=>Subject::all()->random()->id,
-            "progress"=>$this->faker->randomDigit,
-            "state"=>$this->faker->randomDigit,
-            "entry_level"=>$this->faker->randomDigit,
-//            "created_at"=>$this->faker->dateTime($max = 'now', $timezone = null),
-            "completed_at"=>$this->faker->dateTime($max = 'now', $timezone = null),
+            "user_id" => User::all()->random()->id,
+            "subject_id" => Subject::all()->random()->id,
+            "progress" => $this->faker->randomDigit,
+            "state" => $this->faker->randomDigit,
+            "entry_level" => $this->faker->randomDigit,
+            "created_at" => now(),
+            "updated_at" => now(),
+            "completed_at" => $this->faker->dateTime($max = 'now', $timezone = null),
         ];
     }
 }
