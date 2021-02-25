@@ -24,11 +24,11 @@ class UserExamFactory extends Factory
     public function definition()
     {
         return [
-            "user_id"=>User::all()->random()->id,
-            "subject_id"=>Subject::all()->random()->id,
-            "state"=>$this->faker->randomDigit,
-            "total_score"=>$this->faker->randomDigit,
-            "duration"=>$this->faker->numberBetween($min=1800, $max=5400),
+            "user_id" => User::all()->random()->id,
+            "subject_id" => Subject::all()->random()->id,
+            "state" => $this->faker->randomDigit,
+            "total_score" => $this->faker->randomDigit,
+            "duration" => $this->faker->numberBetween($min = 1800, $max = 5400),
         ];
     }
 }

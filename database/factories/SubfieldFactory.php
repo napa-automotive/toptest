@@ -23,11 +23,11 @@ class SubfieldFactory extends Factory
     public function definition()
     {
         return [
-            "subject_id"=>Subject::all()->random()->id,
-            "name"=>$this->faker->word,
-            "description"=>$this->faker->text($maxNbChars = 200),
-            "image"=>$this->faker->word,
-            "thumbnail"=>$this->faker->word,
+            "subject_id" => Subject::all()->random()->id,
+            "name" => $this->faker->word,
+            "description" => $this->faker->text($maxNbChars = 200),
+            "image" => $this->faker->word,
+            "thumbnail" => $this->faker->word,
         ];
     }
 }

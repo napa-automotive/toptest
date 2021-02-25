@@ -23,10 +23,10 @@ class TestOptionFactory extends Factory
     public function definition()
     {
         return [
-            "question_id"=>TestQuestion::all()->random()->id,
-            "name"=>$this->faker->word,
-            "description"=>$this->faker->text($maxnbChars = 20),
-            "is_correct"=>$this->faker->boolean,
+            "question_id" => TestQuestion::all()->random()->id,
+            "name" => $this->faker->word,
+            "description" => $this->faker->text($maxnbChars = 20),
+            "is_correct" => $this->faker->boolean,
 
         ];
     }

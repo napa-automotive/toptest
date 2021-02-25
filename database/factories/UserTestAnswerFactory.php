@@ -25,10 +25,10 @@ class UserTestAnswerFactory extends Factory
     public function definition()
     {
         return [
-            "test_id"=>UserTest::all()->random()->id,
-            "question_id"=>TestQuestion::all()->random()->id,
-            "option_id"=>TestOption::all()->random()->id,
-            "is_correct"=>$this->faker->boolean,
+            "test_id" => UserTest::all()->random()->id,
+            "question_id" => TestQuestion::all()->random()->id,
+            "option_id" => TestOption::all()->random()->id,
+            "is_correct" => $this->faker->boolean,
         ];
     }
 }

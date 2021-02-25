@@ -23,9 +23,9 @@ class ChapterFactory extends Factory
     public function definition()
     {
         return [
-            "subfield_id"=>Subfield::all()->random()->id,
-            "name"=>$this->faker->word,
-            "description"=>$this->faker->text($maxNbChars = 200),
+            "subfield_id" => Subfield::all()->random()->id,
+            "name" => $this->faker->word,
+            "description" => $this->faker->text($maxNbChars = 200),
         ];
     }
 }

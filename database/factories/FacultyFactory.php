@@ -23,10 +23,10 @@ class FacultyFactory extends Factory
     public function definition()
     {
         return [
-            "university_id"=>University::all()->random()->id,
-            "name"=>$this->faker->firstName,
-            "description"=>$this->faker->sentence($nbWords = 6, $variableNbWords = true),
-            "avarage_score"=>$this->faker->randomDigit,
+            "university_id" => University::all()->random()->id,
+            "name" => $this->faker->firstName,
+            "description" => $this->faker->sentence($nbWords = 6, $variableNbWords = true),
+            "avarage_score" => $this->faker->randomDigit,
         ];
     }
 }

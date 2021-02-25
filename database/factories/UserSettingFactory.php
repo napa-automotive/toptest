@@ -23,9 +23,9 @@ class UserSettingFactory extends Factory
     public function definition()
     {
         return [
-            "user_id"=>User::all()->random()->id,
-            "key"=>$this->faker->word,
-            "value"=>$this->faker->word,
+            "user_id" => User::all()->random()->id,
+            "key" => $this->faker->word,
+            "value" => $this->faker->word,
         ];
     }
 }

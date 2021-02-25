@@ -23,10 +23,10 @@ class TestQuestionFactory extends Factory
     public function definition()
     {
         return [
-            "unit_id"=>Unit::all()->random()->id,
-            "name"=>$this->faker->word,
-            "description"=>$this->faker->text($maxNbChars = 20),
-            "level"=>$this->faker->randomDigit,
+            "unit_id" => Unit::all()->random()->id,
+            "name" => $this->faker->word,
+            "description" => $this->faker->text($maxNbChars = 20),
+            "level" => $this->faker->randomDigit,
         ];
     }
 }

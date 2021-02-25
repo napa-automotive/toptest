@@ -22,15 +22,15 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
-            "first_name"=>$this->faker->word,
-            "last_name"=>$this->faker->word,
-            "phone_number"=>$this->faker->e164PhoneNumber,
-            "email"=>$this->faker->safeEmail,
-            "password"=>$this->faker->password,
-            "image"=>$this->faker->text($maxNbChars = 7),
-            "thumbnail"=>$this->faker->text($maxNbChars = 20),
-            "verified_at"=>$this->faker->dateTime($max = 'now', $timezone = null),
-            "activated_at"=>$this->faker->dateTime($max = 'now', $timezone = null),
+            "first_name" => $this->faker->word,
+            "last_name" => $this->faker->word,
+            "phone_number" => $this->faker->e164PhoneNumber,
+            "email" => $this->faker->safeEmail,
+            "password" => $this->faker->password,
+            "image" => $this->faker->text($maxNbChars = 7),
+            "thumbnail" => $this->faker->text($maxNbChars = 20),
+            "verified_at" => $this->faker->dateTime($max = 'now', $timezone = null),
+            "activated_at" => $this->faker->dateTime($max = 'now', $timezone = null),
         ];
     }
 }

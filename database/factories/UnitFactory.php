@@ -23,10 +23,10 @@ class UnitFactory extends Factory
     public function definition()
     {
         return [
-            "chapter_id"=>Chapter::all()->random()->id,
-            "name"=>$this->faker->word,
-            "description"=>$this->faker->text($maxNbChars = 200),
-            "content"=>$this->faker->text($maxNbChars = 400)
+            "chapter_id" => Chapter::all()->random()->id,
+            "name" => $this->faker->word,
+            "description" => $this->faker->text($maxNbChars = 200),
+            "content" => $this->faker->text($maxNbChars = 400)
         ];
     }
 }

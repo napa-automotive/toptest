@@ -22,21 +22,22 @@ class UniversityFactory extends Factory
     public function definition()
     {
         return [
-            "name"=>$this->faker->word,
-            "description"=>$this->faker->sentence($nbWords = 6, $variableNbWords = true),
-            "location"=>$this->faker->state,
-            "rating"=>$this->faker->randomDigit,
-            "rector"=>$this->faker->firstNameMale,
-            "meta"=>json_encode([$this->faker->randomElement(
-                [
-                "house",
-                "flat",
-                "apartment",
-                "room", "shop",
-                "lot", "garage"
-            ]
-            )
-    ]),
+            "name" => $this->faker->word,
+            "description" => $this->faker->sentence($nbWords = 6, $variableNbWords = true),
+            "location" => $this->faker->state,
+            "rating" => $this->faker->randomDigit,
+            "rector" => $this->faker->firstNameMale,
+            "meta" => json_encode([
+                $this->faker->randomElement(
+                    [
+                        "house",
+                        "flat",
+                        "apartment",
+                        "room", "shop",
+                        "lot", "garage"
+                    ]
+                )
+            ]),
         ];
     }
 }
