@@ -10,6 +10,6 @@ class TestOption extends Model
     use HasFactory;
 
     public function question(){
-        return $this->hasOne(TestQuestion::class);
+        return $this->belongsTo(TestQuestion::class);
     }
 }
