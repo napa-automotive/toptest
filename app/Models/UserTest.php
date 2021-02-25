@@ -12,19 +12,12 @@ class UserTest extends Model
     public function subject(){
         return $this->belongsTo(Subject::class);
     }
-    public function testAnswer(){
-        return $this->belongsTo(UserTestAnswer::class);
-    }
+
     public function userExam(){
         return $this->belongsTo(UserExam::class);
     }
 
-    // public function users(){
-    //     return $this->hasMany(User::class);
-    // }
-
     public function user(){
         return $this->belongsTo(User::class);
     }
-
 }
