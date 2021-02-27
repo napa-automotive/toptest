@@ -61,7 +61,6 @@ class UserListLayout extends Table
                     return DropDown::make()
                         ->icon('options-vertical')
                         ->list([
-
                             Link::make(__('Edit'))
                                 ->route('platform.systems.users.edit', $user->id)
                                 ->icon('pencil'),

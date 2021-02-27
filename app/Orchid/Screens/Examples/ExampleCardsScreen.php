@@ -32,7 +32,7 @@ class ExampleCardsScreen extends Screen
     public function query(): array
     {
         return [
-            'card' => new class implements Cardable {
+            'card' => new class() implements Cardable {
                 /**
                  * @return string
                  */
@@ -77,7 +77,7 @@ class ExampleCardsScreen extends Screen
                     return Color::INFO();
                 }
             },
-            'cardCompendium' => new class implements Cardable {
+            'cardCompendium' => new class() implements Cardable {
                 /**
                  * @return string
                  */
@@ -124,7 +124,7 @@ class ExampleCardsScreen extends Screen
                     return Color::INFO();
                 }
             },
-            'cardPersona'    => new class implements Cardable {
+            'cardPersona'    => new class() implements Cardable {
                 /**
                  * @return string
                  */
@@ -139,7 +139,7 @@ class ExampleCardsScreen extends Screen
                 public function description(): string
                 {
                     return
-                        '<p>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>'.
+                        '<p>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>' .
                         new Facepile(User::limit(4)->get()->map->presenter());
                 }
 

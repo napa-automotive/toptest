@@ -65,7 +65,6 @@ class ExampleFieldsScreen extends Screen
         return [
             Layout::columns([
                 Layout::rows([
-
                     Input::make('name')
                         ->title('Full Name:')
                         ->placeholder('Enter full name')
@@ -106,7 +105,6 @@ class ExampleFieldsScreen extends Screen
                     TextArea::make('textarea')
                         ->title('Example textarea')
                         ->rows(6),
-
                 ])->title('Base Controls'),
                 Layout::rows([
                     Input::make('disabled_input')
@@ -153,7 +151,6 @@ class ExampleFieldsScreen extends Screen
                         ->placeholder('Readonlyd textarea')
                         ->rows(7)
                         ->disabled(),
-
                 ])->title('Input States'),
             ]),
 
@@ -170,7 +167,6 @@ class ExampleFieldsScreen extends Screen
                     Button::make('Default')->method('buttonClickProcessing')->type(Color::DEFAULT()),
                     Button::make('Link')->method('buttonClickProcessing')->type(Color::LINK()),
                 ])->autoWidth(),
-
 
                 Button::make('Block level button')
                     ->method('buttonClickProcessing')
@@ -271,7 +267,6 @@ class ExampleFieldsScreen extends Screen
                 Button::make('Submit')
                     ->method('buttonClickProcessing')
                     ->type(Color::DEFAULT()),
-
             ])->title('Textual HTML5 Inputs'),
         ];
     }

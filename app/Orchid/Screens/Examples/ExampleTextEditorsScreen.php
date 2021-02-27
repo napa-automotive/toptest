@@ -71,7 +71,6 @@ class ExampleTextEditorsScreen extends Screen
 
                 Code::make('code')
                     ->title('Code'),
-
             ]),
         ];
     }
